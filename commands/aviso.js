@@ -9,7 +9,7 @@ if (!args[0]) {
 } else if (content.length > 1000) {
   return message.channel.send(`${message.author.username}, forneça um aviso de no máximo 1000 caracteres.`);
 } else {
-  var canal = message.guild.channels.cache.find(ch => ch.id === "887340231030866060");
+  var canal = message.guild.channels.cache.find(ch => ch.id === "890590313029201981");
   const msg = await canal.send(
     new Discord.MessageEmbed()
     .setColor("#230094")

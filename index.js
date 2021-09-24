@@ -39,7 +39,7 @@ client.on("ready", () => {
   i = 0;
   setInterval( () =>
   client.user.setActivity(`${activities[i++ % activities.length]}`, {
-    type: "WATCHING"
+    type: "LISTENING"
   }), 1000 * 60);
   client.user
   .setStatus("online")
