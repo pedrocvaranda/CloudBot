@@ -32,6 +32,19 @@ client.on('message', message => {
   }
 });
 
-
+client.on("ready", () => {
+  let activities = [
+    `${config.prefix}help`
+  ],
+  i = 0;
+  setInterval( () =>
+  client.user.setActivity(`${activities[i++ % activities.length]}`, {
+    type: "PLAYING"
+  }), 1000 * 60);
+  client.user
+  .setStatus("online")
+  .catch(console.error);
+console.log(`${config.prefix}help`)
+});
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
