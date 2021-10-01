@@ -12,11 +12,11 @@ exports.run = async (client, message, args) => {
     return message.channel.send(`${sender} Este comando é restrito.`)
   } else if (message.content.includes("on")) {
     await role.setPermissions(67109889);
-    await message.channel.send(`O sistema de antiraid foi ligado por ${sender}`)
+    await message.channel.send(`O sistema de antispam foi ligado por ${sender}`)
   } else if (message.content.includes("off")) {
     await role.setPermissions(67177473);
-    await message.channel.send(`O sistema de antiraid foi desligado por ${sender}`);
+    await message.channel.send(`O sistema de antispam foi desligado por ${sender}`);
   } else {
-    return message.channel.send(`${sender} a sintaxe correta é c!antiraid on | off`)
+    return message.channel.send(`${sender} a sintaxe correta é c!antispam on | off`)
   }
 }
