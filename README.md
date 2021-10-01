@@ -12,7 +12,11 @@
 
    c!coinflip {cara/coroa} (Cara ou Coroa!)
 
+   c!embed {text}
+
    c!emoji {emoji} (Aumenta o tamanho do emoji)
+
+   c!help (A Lista de comandos)
 
    c!ideia {text} (Manda uma sugestão)
 
@@ -21,4 +25,5 @@
    c!say {text} (Manda uma msg)
 
    c!uptime (Mostra o tempo ativo)
+   
 
