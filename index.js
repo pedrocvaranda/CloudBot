@@ -34,17 +34,48 @@ client.on('message', message => {
 
 client.on("ready", () => {
   let activities = [
-    `${config.prefix}help`
+    `${config.prefix}help`,
+    `by ροlar#0672`
   ],
   i = 0;
   setInterval( () =>
   client.user.setActivity(`${activities[i++ % activities.length]}`, {
     type: "LISTENING"
-  }), 1000 * 60);
+  }), 500 * 60);
   client.user
   .setStatus("online")
   .catch(console.error);
-console.log(`${config.prefix}help`)
+console.log(`Estamos ONLINE!
+
+--------------------------------------------------------------------------------
+
+☁ CloudBot
+ Um bot não-profissional (bem parecido com a Lorrita) do meu servidor do discord
+
+Lista de Comandos
+   c!antiraid | antispam {on/off} (Ativa o modo de antiraid nos canais)
+
+   c!avatar {user} (Mostra o avatar do usuario mencionado)
+
+   c!aviso | notas {text} (Manda um aviso ao canal #Avisos)
+
+   c!clear {num<99} (Limpa as mensagens até 14 dias atrás)
+
+   c!coinflip {cara/coroa} (Cara ou Coroa!)
+
+   c!embed {text}
+
+   c!emoji {emoji} (Aumenta o tamanho do emoji)
+
+   c!help (A Lista de comandos)
+
+   c!ideia | sugestão {text} (Manda uma sugestão)
+
+   c!ping (Informa o ping do servidor)
+
+   c!say {text} (Manda uma msg)
+
+   c!uptime (Mostra o tempo ativo)`)
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
