@@ -1,3 +1,5 @@
+//Processo INICIAL - Configurações básicas//
+
 const express = require('express');
 const app = express();
 app.get("/", (request, response) => {
@@ -12,6 +14,9 @@ const Discord = require("discord.js"); //Conexão com a livraria Discord.js
 const client = new Discord.Client(); //Criação de um novo Client
 const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
 
+//Processo INICIAL - Configurações básicas//
+
+//Processo INICIAL - Start//
 
 client.on('message', message => {
      if (message.author.bot) return;
@@ -32,10 +37,14 @@ client.on('message', message => {
   }
 });
 
+//Processo INICIAL - Start//
+
+//Processo SECUNDÁRIO - Descrição//
+
 client.on("ready", () => {
   let activities = [
     `${config.prefix}help`,
-    `by ροlar#0672`
+    `by ρν#0672`
   ],
   i = 0;
   setInterval( () =>
@@ -47,7 +56,7 @@ client.on("ready", () => {
   .catch(console.error);
 console.log(`Estamos ONLINE!
 
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 ☁ CloudBot
  Um bot não-profissional (bem parecido com a Lorrita) do meu servidor do discord
@@ -75,7 +84,16 @@ Lista de Comandos
 
    c!say {text} (Manda uma msg)
 
-   c!uptime (Mostra o tempo ativo)`)
+   c!temp-msg {text} (Manda uma mensagem temporária)
+
+   c!uptime (Mostra o tempo ativo)
+   `)
 });
 
+//Processo SECUNDÁRIO - Descrição//
+
+//Processo TERCIÁRIO - Login//
+
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
+
+//Processo TERCIÁRIO - Login//
