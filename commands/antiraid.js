@@ -2,13 +2,14 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
 
-  const role = await message.guild.roles.cache.find(r => r.id === "890589858005934131");
+  const role = await message.guild.roles.cache.find(r => r.id === "877203590878470175");
   const sender = message.author;
 
   if (!message.member.roles.cache.some(r => [
     "890589074975494144",
     "890589455914778624",
-    "890589807493939262"
+    "890589807493939262",
+    "861690841214484511"
   ].includes(r.id))) {
     return message.channel.send(`${sender} Este comando é restrito.`)
   } else if (message.content.includes("on")) {

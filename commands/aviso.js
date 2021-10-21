@@ -12,7 +12,7 @@ if (!args[0]) {
   var canal = message.guild.channels.cache.find(ch => ch.id === "892520551271260290");
   const msg = await canal.send(
     new Discord.MessageEmbed()
-    .setColor(`#00ecff`)
+    .setColor("#00ffff")
     .addField("Autor:", message.author)
     .addField("Conteúdo", content)
     .setFooter("ID do Autor: " + message.author.id)
