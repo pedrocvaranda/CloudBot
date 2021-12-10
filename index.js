@@ -44,7 +44,7 @@ client.on('message', message => {
 client.on("ready", () => {
   let activities = [
     `${config.prefix}help`,
-    `by ρν#0672`
+    `by ρv#0672`
   ],
   i = 0;
   setInterval( () =>

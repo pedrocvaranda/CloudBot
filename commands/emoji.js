@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(
       "`" + args[0] + "` **não é um emoji deste servidor.**"
     );
-  } else if (emoji.animated === true) {
+  } else if (emoji.animated === false) {
     message.channel.send(`<a:${args[0]}:${emoji.id}>`);
   } else {
     message.channel.send(`<:${args[0]}:${emoji.id}>`);
